@@ -8,7 +8,11 @@ class QuadraticEquationTestCase(unittest.TestCase):
 
 
     def test_str_float_2(self):
-        pass
+        self.assertEqual(format_price('3000.25330000000'), '3 000.25')
+
+
+    def test_str_int(self):
+        self.assertEqual(format_price('300000'), '300 000')
 
 
 if __name__ == '__main__':
