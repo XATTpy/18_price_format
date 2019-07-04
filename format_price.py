@@ -15,4 +15,5 @@ def format_price(price):
 
 
 if __name__ == '__main__':
-    str_price = argv[1]
+    price = argv[1]
+    print(format_price(price))

@@ -19,5 +19,9 @@ class QuadraticEquationTestCase(unittest.TestCase):
         self.assertEqual(format_price('TEST4'), None)
 
 
+    def test_zero(self):
+        self.assertEqual(format_price('0'), '0')
+
+
 if __name__ == '__main__':
     unittest.main()
