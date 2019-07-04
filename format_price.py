@@ -2,7 +2,11 @@ from sys import argv
 
 
 def format_price(price):
-    price_num = round(float(price), 2)
+    try:
+        price_num = round(float(price), 2)
+    except ValueError:
+        return None
+
     if price_num.is_integer():
         str_price = '{:,.0f}'.format(price_num).replace(',', ' ')
     else:

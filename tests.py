@@ -15,5 +15,9 @@ class QuadraticEquationTestCase(unittest.TestCase):
         self.assertEqual(format_price('300000'), '300 000')
 
 
+    def test_str_with_chars(self):
+        self.assertEqual(format_price('TEST4'), None)
+
+
 if __name__ == '__main__':
     unittest.main()
