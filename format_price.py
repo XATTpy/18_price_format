@@ -15,5 +15,9 @@ def format_price(price):
 
 
 if __name__ == '__main__':
-    price = argv[1]
+    try:
+        price = argv[1]
+    except IndexError:
+        quit('At the input data is expected to format.')
+        
     print(format_price(price))
