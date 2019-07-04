@@ -2,7 +2,7 @@ from sys import argv
 
 
 def format_price(price):
-    price_num = float(price)
+    price_num = round(float(price), 2)
     str_price = '{:,.0f}'.format(price_num).replace(',', ' ')
     return str_price
 
