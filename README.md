@@ -1,6 +1,29 @@
 # Price Formatter
 
-[TODO. There will be project description]
+This script formats the incoming number in a more suitable form for the price. Also, there are tests written using the module ```unittest```
+
+# How to use
+
+```test.py``` contains several tests that check the expected result.
+
+Running tests:
+
+```bash
+$ python3 tests.py 
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+```
+
+# Quickstart
+
+Example of script launch on Linux, Python 3.6:
+```
+$ python3 format_price.py 3499000
+3 499 000
+```
 
 # Project Goals
 
