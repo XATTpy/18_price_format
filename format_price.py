@@ -2,6 +2,8 @@ from sys import argv
 
 
 def format_price(price):
+    if type(price) != str:
+        return None
     try:
         price_num = round(float(price), 2)
     except ValueError:
@@ -17,7 +19,7 @@ if __name__ == '__main__':
     try:
         price = argv[1]
     except IndexError:
-        quit('At the input data is expected to format.')
+        quit('A number is expected on the input.')
         
     str_price = format_price(price)
     print(str_price)

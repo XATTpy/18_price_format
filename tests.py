@@ -24,5 +24,13 @@ class QuadraticEquationTestCase(unittest.TestCase):
         self.assertEqual(format_price('0'), '0')
 
 
+    def test_bool(self):
+        self.assertAlmostEqual(format_price(True), None)
+
+
+    def test_list(self):
+        self.assertAlmostEqual(format_price([1, 2, 3, 5]), None)
+
+
 if __name__ == '__main__':
     unittest.main()
