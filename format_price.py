@@ -20,6 +20,6 @@ if __name__ == '__main__':
         price = argv[1]
     except IndexError:
         quit('A number is expected on the input.')
-        
+
     str_price = format_price(price)
     print(str_price)
