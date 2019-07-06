@@ -12,7 +12,7 @@ Running tests:
 $ python3 tests.py 
 .....
 ----------------------------------------------------------------------
-Ran 5 tests in 0.000s
+Ran 11 tests in 0.001s
 
 OK
 ```
