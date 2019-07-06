@@ -12,8 +12,12 @@ class QuadraticEquationTestCase(unittest.TestCase):
         self.assertEqual(format_price('3000.25330000000'), '3 000.25')
 
 
-    def test_str_int(self):
+    def test_str_int_1(self):
         self.assertEqual(format_price('300000'), '300 000')
+
+
+    def test_str_int_2(self):
+        self.assertEqual(format_price('-300000'), '-300 000')
 
 
     def test_str_with_chars(self):
@@ -29,7 +33,19 @@ class QuadraticEquationTestCase(unittest.TestCase):
 
 
     def test_list(self):
-        self.assertAlmostEqual(format_price([1, 2, 3, 5]), None)
+        self.assertAlmostEqual(format_price((1, 2, 3, 5)), None)
+
+
+    def test_array(self):
+        self.assertAlmostEqual(format_price([1, 2, 'rfse', 4]), None)
+
+
+    def test_dict(self):
+        self.assertAlmostEqual(format_price({'1': 1}), None)
+
+
+    def test_lambda(self):
+        self.assertAlmostEqual(format_price(lambda x, y: x+y), None)
 
 
 if __name__ == '__main__':
