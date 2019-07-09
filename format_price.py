@@ -2,7 +2,7 @@ from sys import argv
 
 
 def format_price(price):
-    if type(price) != str:
+    if not isinstance(price, (int, float, str)):
         return None
     try:
         price_num = round(float(price), 2)
